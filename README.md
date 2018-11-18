@@ -8,6 +8,8 @@
 ## Usage 
 
 1- Launch the API as a service from the collector user with `python root_listen`
+
 2- Launch the command `python send_logs.py` to send an example log to the api
+
 3- The logs are recorded in a newly created `record` directory (instanced in the same folder as the two other .py file). 
 
