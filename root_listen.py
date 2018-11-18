@@ -1,4 +1,5 @@
 #import optparse
+import os
 from time import gmtime, strftime
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
@@ -6,9 +7,11 @@ import json
 
 my_ip = "0.0.0.0"
 my_port ="5050"
-logs_dir = "/home/matthieu/Téléchargements/jupyter_hub/logs_api/record/"
+logs_dir = "record/"
 log_fname = "test.log"
 
+if not os.path.exists(logs_dir):
+    os.makedirs(logs_dir)
 # parser
 #parser = optparse.OptionParser()
 #parser.add_option('-p', '--path', default=logs_dir, help='path to the directory to save the file')
